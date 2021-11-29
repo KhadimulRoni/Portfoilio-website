@@ -11,7 +11,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function() {
+    emailjs.init("user_ukwFdTOPMsiSBhVBpS5fJ");
+    })();
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+
 
 </head>
 <body>
@@ -42,7 +49,7 @@
                 <div class="text-1">Hello, my name is</div>
                 <div class="text-2">Khadimul Islam</div>
                 <div class="text-3">And I'm a <span class="typing"></span></div>
-                <a href="https://drive.google.com/file/d/1J1RhfMuPLLggjJ02aWvXfNe3OowLlaJ8/view?usp=sharing">Hire me</a>
+                <a href="https://drive.google.com/file/d/1J1RhfMuPLLggjJ02aWvXfNe3OowLlaJ8/view?usp=sharing">Download Resume</a>
             </div>
         </div>
     </section>
@@ -58,7 +65,7 @@
                 <div class="column right">
                     <div class="text">I'm Khadimul and I'm a <span class="typing-2"></span></div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ut voluptatum eveniet doloremque autem excepturi eaque, sit laboriosam voluptatem nisi delectus. Facere explicabo hic minus accusamus alias fuga nihil dolorum quae. Explicabo illo unde, odio consequatur ipsam possimus veritatis, placeat, ab molestiae velit inventore exercitationem consequuntur blanditiis omnis beatae. Dolor iste excepturi ratione soluta quas culpa voluptatum repudiandae harum non.</p>
-                    <a href="https://drive.google.com/file/d/1J1RhfMuPLLggjJ02aWvXfNe3OowLlaJ8/view?usp=sharing">Download Resume</a>
+                    <a href="https://drive.google.com/file/d/1J1RhfMuPLLggjJ02aWvXfNe3OowLlaJ8/view?usp=sharing">Hire me</a>
                 </div>
             </div>
         </div>
@@ -149,7 +156,7 @@
     <!-- teams section start -->
     <section class="teams" id="teams">
         <div class="max-width">
-            <h2 class="title">My teams</h2>
+            <h2 class="title">My Projects</h2>
             <div class="carousel owl-carousel">
                 <div class="card">
                     <div class="box">
@@ -224,23 +231,23 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form action="#">
+                    <form id="contact-form"  class="contact_form" action="#">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Name" required>
+                                <input id="name" type="text" placeholder="Name" required />
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="Email" required>
+                                <input id="email" type="email" placeholder="Email" required />
                             </div>
                         </div>
-                        <div class="field">
-                            <input type="text" placeholder="Subject" required>
+                        <div class="field subject">
+                            <input id="subject"  type="text" placeholder="Subject" required />
                         </div>
-                        <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+                        <div class="field textarea msg">
+                            <textarea id="msg" cols="30" rows="10" placeholder="Message.." required></textarea>
                         </div>
                         <div class="button-area">
-                            <button type="submit">Send message</button>
+                            <button type="submit" onclick="sendMail()">Send message</button>
                         </div>
                     </form>
                 </div>
@@ -255,6 +262,9 @@
 
     <script src="script.js"></script>
     <script src="sendMail.js"></script>
+    
+    
+    
 
 </body>
 </html>
