@@ -68,7 +68,7 @@ section .title::before {
    left: 50%;
    width: 180px;
    height: 3px;
-   background: #111;
+   background: rgb(1, 1, 78);
    transform: translateX(-50%);
 }
 section .title::after {
@@ -265,7 +265,7 @@ section .title::after {
 .services,
 .teams {
    color: #fff;
-   background: #111;
+   background: rgb(1, 1, 78);
 }
 .services .title::before,
 .teams .title::before {
@@ -273,12 +273,12 @@ section .title::after {
 }
 .services .title::after,
 .teams .title::after {
-   background: #111;
+   background: rgb(1, 1, 78);
    content: 'what i provide';
 }
 .services .serv-content .card {
    width: calc(33% - 20px);
-   background: #222;
+   background: rgb(1, 1, 95);
    text-align: center;
    border-radius: 6px;
    padding: 50px 25px;
@@ -308,6 +308,14 @@ section .title::after {
    margin: 10px 0 7px 0;
 }
 
+/* blogs section */
+.blogs .title::after {
+   content: 'what i write';
+}
+.blog {
+   text-align: center;
+   color: red;
+}
 /* skills section styling */
 
 .skills .title::after {
@@ -376,11 +384,17 @@ section .title::after {
 .skills-content .right .js::before {
    width: 80%;
 }
-.skills-content .right .php::before {
+.skills-content .right .react::before {
    width: 80%;
 }
-.skills-content .right .mysql::before {
+.skills-content .right .mongo::before {
    width: 70%;
+}
+.skills-content .right .node::before {
+   width: 60%;
+}
+.skills-content .right .express::before {
+   width: 50%;
 }
 .p-description {
    margin: 20px 0;
@@ -399,7 +413,7 @@ section .title::after {
    color: white;
 }
 .btn-div :hover {
-   background: white;
+   background: none;
    color: teal;
 }
 
@@ -408,7 +422,7 @@ section .title::after {
    content: 'who with me';
 }
 .teams .carousel .card {
-   background: #222;
+   background: rgb(1, 1, 95);
    border-radius: 6px;
    padding: 25px 35px;
    text-align: center;
@@ -439,6 +453,18 @@ section .title::after {
    object-fit: cover;
    border-radius: 50%;
    border: 5px solid teal;
+   transition: all 0.3s ease;
+}
+
+.projects {
+   color: #fff;
+   background: rgb(1, 1, 78);
+}
+.projects .carousel .card img {
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+   border: 5px solid rgba(0, 128, 128, 0.164);
    transition: all 0.3s ease;
 }
 .teams .carousel .card:hover img {
@@ -563,7 +589,7 @@ section .title::after {
 }
 /* footer section styling */
 footer {
-   background: #111;
+   background: rgb(1, 1, 78);
    padding: 15px 23px;
    color: #fff;
    text-align: center;
@@ -603,7 +629,7 @@ footer span a:hover {
       width: 100%;
       left: -100%;
       top: 0;
-      background: #111;
+      background: rgb(1, 1, 78);
       text-align: center;
       padding-top: 80px;
       transition: all 0.3s ease;
