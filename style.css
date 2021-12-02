@@ -7,6 +7,13 @@
    box-sizing: border-box;
    text-decoration: none;
 }
+/* #loading {
+   mask-position: fixed;
+   width: 100%;
+   height: 100vh;
+   background: #fff url('images/guanxian.gif') no-repeat;
+   z-index: 99999;
+} */
 html {
    scroll-behavior: smooth;
 }
@@ -216,7 +223,63 @@ section .title::after {
    color: teal;
    background: none;
 }
+/* side bar */
+.sidebar {
+   width: 50px;
+   height: 100vh;
+   background: linear-gradient(#00545d, #000729);
+   position: absolute;
+   right: 0;
+   top: 0;
+}
+.social-icon img,
+.useful-link img {
+   width: 30px;
+   margin: 5px auto;
+   cursor: pointer;
+}
+.social-icon1:hover {
+   width: 35px;
+}
+.social-icon2:hover {
+   width: 40px;
+}
+.social-icon3:hover {
+   width: 40px;
+}
+.social-icon {
+   width: 50px;
+   text-align: center;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   animation: mymove 3s infinite;
+   animation-direction: alternate;
+   border-radius: 15px;
+}
+.useful-link {
+   width: 50px;
+   text-align: center;
+   position: absolute;
+   bottom: 30px;
+   animation: mymove 3s infinite;
+   animation-direction: alternate;
+   border-radius: 15px;
+}
+/* bubbles section */
+.bubbles img {
+   width: 50px;
+   animation: bubble 7s linear infinite;
+}
 
+.bubbles {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   position: absolute;
+   bottom: -65px;
+}
 /* about section styling */
 .about .title::after {
    content: 'who i am';
@@ -229,6 +292,14 @@ section .title::after {
    width: 400px;
    object-fit: cover;
    border-radius: 6px;
+}
+.about :hover img {
+   transform: scale(1.15);
+   transition: all 0.3s ease;
+}
+a:hover {
+   transform: scale(1.05);
+   transition: all 0.3s ease;
 }
 .about .about-content .right {
    width: 55%;
@@ -455,11 +526,45 @@ section .title::after {
    border: 5px solid teal;
    transition: all 0.3s ease;
 }
+/* projects */
 
+.projects .carousel .card:hover .box img {
+   transform: scale(1.15);
+}
 .projects {
    color: #fff;
+   font-family: 'Poppins', sans-serif;
    background: rgb(1, 1, 78);
 }
+.projects .card {
+   background: rgb(1, 1, 90);
+   padding: 2%;
+   overflow: hidden;
+}
+.projects .box {
+   padding: 3%;
+}
+.projects .box .details {
+   padding: 4% 2%;
+}
+.projects .box .details p {
+   font-size: 15px;
+}
+.projects .box .details h2 {
+   color: gold;
+}
+.projects .box .tools {
+   padding: 10px 0;
+}
+.projects .box .details .tools span {
+   background: rgb(6, 6, 150);
+   color: yellow;
+   font-weight: 500;
+   margin: 2px;
+   padding: 0 5px;
+   border-radius: 5px;
+}
+
 .projects .carousel .card img {
    height: 100%;
    width: 100%;
@@ -727,4 +832,47 @@ footer span a:hover {
       font-size: 23px;
       line-height: 38px;
    }
+}
+
+@keyframes bubble {
+   0% {
+      transform: translateY(0);
+      opacity: 0;
+   }
+   50% {
+      opacity: 1;
+   }
+   70% {
+      opacity: 1;
+   }
+   100% {
+      transform: translateY(-90vh);
+      opacity: 0;
+   }
+}
+
+.bubbles img:nth-child(1) {
+   animation-delay: 2s;
+   width: 25px;
+}
+.bubbles img:nth-child(2) {
+   animation-delay: 1s;
+}
+.bubbles img:nth-child(3) {
+   animation-delay: 3s;
+   width: 25px;
+}
+.bubbles img:nth-child(4) {
+   animation-delay: 4.5s;
+}
+.bubbles img:nth-child(5) {
+   animation-delay: 3s;
+}
+.bubbles img:nth-child(6) {
+   animation-delay: 6s;
+   width: 20px;
+}
+.bubbles img:nth-child(7) {
+   animation-delay: 4s;
+   width: 35px;
 }
